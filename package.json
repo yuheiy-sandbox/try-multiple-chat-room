@@ -7,7 +7,8 @@
     "start": "babel-node .",
     "nodemon": "nodemon -i client -i public -x babel-node .",
     "watchify": "watchify -t babelify client/main.js -o public/bundle.js -d -v",
-    "dev": "npm run nodemon & npm run watchify"
+    "dev": "npm run nodemon & npm run watchify",
+    "postinstall": "browserify -t babelify client/main.js > public/bundle.js"
   },
   "author": "Yuhei Yasuda <yuhei.yasuda1003@gmail.com> (https://yhey.me/)",
   "license": "MIT",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
     "nodemon": "^1.9.1",
     "watchify": "^3.7.0"
   }
