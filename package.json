@@ -1,0 +1,31 @@
+{
+  "name": "try-multiple-chat-room",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "babel-node .",
+    "nodemon": "nodemon -i client -i public -x babel-node .",
+    "watchify": "watchify -t babelify client/main.js -o public/bundle.js -d -v",
+    "dev": "npm run nodemon & npm run watchify"
+  },
+  "author": "Yuhei Yasuda <yuhei.yasuda1003@gmail.com> (https://yhey.me/)",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.7.5",
+    "babel-polyfill": "^6.7.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "express": "^4.13.4",
+    "moment": "^2.13.0",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "socket.io": "^1.4.5",
+    "socket.io-client": "^1.4.5"
+  },
+  "devDependencies": {
+    "babelify": "^7.2.0",
+    "nodemon": "^1.9.1",
+    "watchify": "^3.7.0"
+  }
+}
